@@ -1,4 +1,4 @@
-## CyberNet Vue2.x Demo
+## CyberNet Frontend Vue2.x Demo
 
 ## Project setup
 ```

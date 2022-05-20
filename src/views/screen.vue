@@ -38,7 +38,12 @@
                       flex-direction: column;
                       align-items: stretch;
                     "
-                  ></div>
+                  >
+                    <div class="ButtonArea">
+                      <div class="Button" @click="AddPOIs">加点</div>
+                      <div class="Button" @click="RemovePOIs">减点</div>
+                    </div>
+                  </div>
                   <div
                     style="
                       height: 100%;
@@ -75,6 +80,7 @@ import AlarmInfo from "./screen/alarmInfo.vue";
 import TopologyInfo from "./screen/topologyInfo.vue";
 import CityInfo from "./screen/cityInfo.vue";
 import CityNum from "./screen/cityNum.vue";
+import poi_request from './pois';
 
 export default {
   components: {
@@ -95,6 +101,18 @@ export default {
     });
     __cy.Connect("http://172.18.1.197:8081");
   },
+  methods: {
+    AddPOIs() {
+      __cy.SendRequest("UpdatePOIs", poi_request, (result) => {
+        console.log("Request Result : ", result);
+      });
+    },
+    RemovePOIs() {
+      __cy.SendRequest("DeleteAllPOIs", {}, (result) => {
+        console.log("Request Result : ", result);
+      });
+    },
+  },
 };
 </script>
 
@@ -105,7 +123,7 @@ export default {
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
   color: white;
   pointer-events: none;
 }
@@ -133,5 +151,20 @@ export default {
   font-size: 16px !important;
   font-weight: 800;
   margin-left: 10px;
+}
+
+.ButtonArea {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  pointer-events: fill;
+}
+
+.Button {
+  padding: 10px 30px;
+  background: #5757b7;
+  color: white;
+  font-size: 16px;
+  margin-right: 12px;
 }
 </style>
