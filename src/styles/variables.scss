@@ -1,0 +1,10 @@
+$menuText:rgb(191, 203, 217);
+$sliderWidth:210px;
+$activeText:#42b983;
+$menuBg:#304156;
+:export {
+	menuBg:$menuBg;
+	menuText:$menuText;
+	sliderWidth:$sliderWidth;
+	activeText:$activeText;
+}

@@ -1,0 +1,43 @@
+body {
+  height: 100%;
+  font-size: 14px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+ .router-link-active {     //route-link点击时去掉下划线
+   text-decoration: none;
+ }
+ 
+ a {
+   text-decoration: none; //去掉原有链接文字下划线
+   cursor: pointer;
+ }
+ 
+ .p_15{
+	 padding: 15px;
+ }
+ .p_20{
+	 padding: 20px;
+	 
+ }
+ .m_15{
+	 margin: 15px;
+ }
+ .m_20{
+	 margin: 20px;
+ }
+ .el-table thead {
+ color:#515a6e;
+ font-weight:500
+}
+ .el-table th{
+	 background-color:ghostwhite;
+
+ }
+ .el-dialog{
+	 width: 35% !important;
+	 text-align: center;
+ }
+ 
