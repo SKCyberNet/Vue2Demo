@@ -99,7 +99,7 @@ export default {
     __cy.SetupListener("Demo", (event) => {
       console.log("event :", event);
     });
-    __cy.Connect("http://172.18.1.197:8081");
+    __cy.Connect("http://xxxxxxx:pppp");
   },
   methods: {
     AddPOIs() {
