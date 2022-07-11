@@ -6,18 +6,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-  <script type="text/javascript" src="http://xxxxxxx:pppp/sdk/cyber-sdk.js"></script>
+  <script type="text/javascript" src="http://xxxxxxx:pppp/sdk/cyber-sdk.js"></script> 
   <title>
     <%= htmlWebpackPlugin.options.title %>
   </title>
 </head>
 
-<body oncontextmenu="return false" style="background:#222;">
+<body oncontextmenu="return false" style="background:#2b2b2b;">
   <noscript>
     <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
         Please enable it to continue.</strong>
   </noscript>
-  <div id="playerUI" style="position: absolute; left:0;top:0; z-index: -1;">
+  <div id="playerUI"
+    style="position: absolute; left: 0; top: 0; pointer-events: fill; z-index: 0; height: 100vh; width: 100vw;">
     <div id="player"></div>
   </div>
   <div id="app"></div>
